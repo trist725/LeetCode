@@ -2,13 +2,19 @@ package main
 
 import (
 	"fmt"
-	t "LeetCode/src/two_sum"
+	"LeetCode/src/two_sum"
 )
 
 func main(){
-	nums := []int{3,2,3}
-	fmt.Println(nums[0:])
-	target := 6
-	output := t.TwoSum(nums, target)
-	fmt.Println(output)
+	//two_sum
+	{
+		nums := []int{3,2,3}
+		fmt.Println(nums[0:])
+		target := 6
+		output := two_sum.TwoSum_1(nums, target)
+		fmt.Println(output)
+		output = two_sum.TwoSum_2(nums, target)
+		fmt.Println(output)
+	}
+
 }

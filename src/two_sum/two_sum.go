@@ -1,6 +1,6 @@
 package two_sum
 
-func TwoSum(nums []int, target int) []int {
+func TwoSum_1(nums []int, target int) []int {
 	// m 负责保存map[整数]整数的序列号
 	m := make(map[int]int, len(nums))
 
@@ -17,6 +17,18 @@ func TwoSum(nums []int, target int) []int {
 		// 把i和i的值，存入map
 		m[nums[i]] = i
 	}
-
 	return nil
+}
+
+func TwoSum_2(nums []int, target int) []int {
+	for i, v1 := range nums{
+		if i != (len(nums) - 1){
+			for j, v2 := range nums[i+1:]{
+				if target == (v1+v2){
+					return []int{i,j+i+1}
+				}
+			}
+		}
+	}
+	return []int{}
 }
