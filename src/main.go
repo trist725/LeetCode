@@ -1,21 +1,16 @@
 package main
 
 import (
-	"LeetCode/src/two_sum"
-	"fmt"
+	"LeetCode/src/Remove_Element"
 )
 
 func main() {
 	//two_sum
 	{
-		nums := []int{3, 2, 3}
-		fmt.Println(nums[0:])
-		target := 6
+		nums := []int{3, 3}
+		nums = nums[:1]
 
-		output := two_sum.TwoSum_1(nums, target)
-		fmt.Println(output)
-		output = two_sum.TwoSum_2(nums, target)
-		fmt.Println(output)
+		Remove_Element.RemoveElement_2(nums, 3)
 	}
 
 }
