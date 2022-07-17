@@ -1,16 +1,13 @@
 package main
 
 import (
-	"LeetCode/src/Remove_Element"
+	"LeetCode/src/Spiral_Matrix_II"
 )
 
 func main() {
-	//two_sum
-	{
-		nums := []int{3, 3}
-		nums = nums[:1]
 
-		Remove_Element.RemoveElement_2(nums, 3)
+	{
+		Spiral_Matrix_II.GenerateMatrix(4)
 	}
 
 }
