@@ -2,28 +2,29 @@ package Remove_Linked_List_Elements
 
 import "testing"
 
-func BenchmarkRemoveElements_1(b *testing.B) {
-	head := ListNode{}
-	arr := []int{1, 2, 6, 3, 4, 5, 6}
-	for i := 0; i < 7; i++ {
+func makeList() *ListNode {
+	head := &ListNode{}
+	arr := []int{0, 6, 1, 2, 3, 4, 5, 6}
+	cur := &ListNode{Val: 666}
+	head.Next = cur
+	for i := 0; i < len(arr); i++ {
 		tmp := ListNode{Val: arr[i]}
-		head.Next = &tmp
+		cur.Next = &tmp
+		cur = cur.Next
 	}
+	return head
+}
+
+func BenchmarkRemoveElements_1(b *testing.B) {
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		RemoveElements_1(&head, 6)
+		RemoveElements_1(makeList(), 6)
 	}
 }
 
 func BenchmarkRemoveElements_2(b *testing.B) {
-	head := ListNode{}
-	arr := []int{1, 2, 6, 3, 4, 5, 6}
-	for i := 0; i < 7; i++ {
-		tmp := ListNode{Val: arr[i]}
-		head.Next = &tmp
-	}
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		RemoveElements_2(&head, 6)
+		RemoveElements_2(makeList(), 6)
 	}
 }
