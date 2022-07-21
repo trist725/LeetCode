@@ -1,7 +1,7 @@
 package main
 
 import (
-	"LeetCode/src/Spiral_Matrix_II"
+	"LeetCode/Spiral_Matrix_II"
 )
 
 func main() {
