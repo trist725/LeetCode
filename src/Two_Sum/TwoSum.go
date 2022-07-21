@@ -1,4 +1,4 @@
-package two_sum
+package Two_Sum
 
 // 1
 // https://leetcode.cn/problems/two-sum/
