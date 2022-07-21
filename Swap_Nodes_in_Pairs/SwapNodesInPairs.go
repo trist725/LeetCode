@@ -31,7 +31,7 @@ func swapPairs(head *ListNode) *ListNode {
 		n2.Next = n1
 		n1.Next = n3
 
-		cur = n2
+		cur = n1
 	}
 
 	return dummy.Next
