@@ -2,7 +2,11 @@ package Reverse_String
 
 // https://leetcode.cn/problems/reverse-string/
 
-func reverseString(s []byte) {
+func ReverseString(s []byte) {
+	if len(s) <= 1 {
+		return
+	}
+
 	var (
 		left  = 0
 		right = len(s) - 1
