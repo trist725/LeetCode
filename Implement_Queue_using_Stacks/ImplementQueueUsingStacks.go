@@ -15,7 +15,7 @@ func (this *MyQueue) Push(x int) {
 	this.In = append(this.In, x)
 }
 
-func (this *MyQueue) in2out() int {
+func (this *MyQueue) in2out() {
 	for len(this.In) > 0 {
 		this.Out = append(this.Out, this.In[len(this.In)-1])
 		this.In = this.In[:len(this.In)-1]
